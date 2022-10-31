@@ -1,0 +1,25 @@
+<!--
+ JustinWritesCode.CodeGeneration.Extensions.csproj
+ 
+   Created: 2022-10-30-10:34:51
+   Modified: 2022-10-30-10:34:52
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>JustinWritesCode.CodeGeneration.Extensions</PackageId>
+    <RootNamespace>$(PackageId)</RootNamespace>
+    <AssemblyName>$(PackageId)</AssemblyName>
+    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+<!--
+ JustinWritesCode.CodeGeneration.slnproj
+ 
+   Created: 2022-10-30-10:55:57
+   Modified: 2022-10-30-10:55:58
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./src/**/*proj" />
+  </ItemGroup>
+</Project>

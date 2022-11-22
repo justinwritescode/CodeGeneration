@@ -1,0 +1,18 @@
+<!--
+ * JustinWritesCode.CodeGeneration.Abstractions.props
+ * 
+ *   Created: 2022-11-12-12:17:01
+ *   Modified: 2022-11-12-12:19:05
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemGroup>
+    <Using Include="Microsoft.CodeAnalysis" />
+    <Using Include="JustinWritesCode.CodeGeneration.Extensions" />
+  </ItemGroup>
+</Project>

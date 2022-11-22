@@ -13,7 +13,7 @@
 using System.Text;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
 /// <summary>
 /// https://stackoverflow.com/questions/20458457/getting-class-fullname-including-namespace-from-roslyn-classdeclarationsyntax

@@ -1,19 +1,18 @@
-// 
+//
 // PropertySymbolExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:41:45
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
-using JustinWritesCode.CodeGeneration.Extensions;
 using Microsoft.CodeAnalysis;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
 public static class PropertySymbolExtensions{
 

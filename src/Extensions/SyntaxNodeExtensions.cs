@@ -17,7 +17,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 // ReSharper disable once CheckNamespace
 namespace Microsoft.CodeAnalysis;
 
-internal static class SyntaxNodeExtensions
+public static class SyntaxNodeExtensions
 {
     /// <summary>
     /// determine the namespace the class/enum/struct is declared in, if any

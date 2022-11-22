@@ -14,7 +14,7 @@ using System.Collections;
 using System.Collections.ObjectModel;
 using Microsoft.CodeAnalysis;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
 /// <summary>
 /// Some extensions copied from:

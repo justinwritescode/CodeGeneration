@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.CodeGeneration.Constants", "JustinWritesCode.CodeGeneration.Constants.csproj", "{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D7042715-8A84-428B-A828-C8599FBF9A7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Local|Any CPU.Build.0 = Local|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA} = {D7042715-8A84-428B-A828-C8599FBF9A7C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B606F74-5044-4AF9-A34B-8FA0CDD26443}
+	EndGlobalSection
+EndGlobal

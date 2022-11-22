@@ -1,19 +1,31 @@
-// 
+/*
+ * StringExtensions.cs
+ *
+ *   Created: 2022-10-31-01:35:49
+ *   Modified: 2022-11-11-05:51:15
+ *
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
+
+//
 // StringExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:40:41
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
 using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
 public static class StringExtensions
 {
@@ -32,5 +44,29 @@ public static class StringExtensions
         }
 
         return false;
+    }
+
+    public static string TrimFromSentinel(this string input, string sentinel)
+    {
+        var index = input.IndexOf(sentinel);
+
+        if (index == -1)
+        {
+            return input;
+        }
+
+        return input.Substring(index + sentinel.Length).Trim();
+    }
+
+    public static string TrimToSentinel(this string input, string sentinel)
+    {
+        var index = input.IndexOf(sentinel);
+
+        if (index == -1)
+        {
+            return input;
+        }
+
+        return input.Substring(0, index).Trim();
     }
 }

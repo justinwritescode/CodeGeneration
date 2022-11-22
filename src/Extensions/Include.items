@@ -1,0 +1,26 @@
+<!--
+ * Include.proj
+ * 
+ *   Created: 2022-11-11-05:53:50
+ *   Modified: 2022-11-11-05:53:50
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemGroup>
+		<Compile Remove="@(Compile)" />
+    <Compile Include="$(MSBuildThisFileDirectory)**/*.cs" />
+    <Compile Remove="obj/**/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" VersionOverride="[4.3.1,)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime" />
+  </ItemGroup>
+</Project>

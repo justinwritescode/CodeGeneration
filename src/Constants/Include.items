@@ -1,0 +1,19 @@
+<!--
+ * Include.proj
+ * 
+ *   Created: 2022-11-11-05:53:50
+ *   Modified: 2022-11-11-05:53:50
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemGroup>
+		<Compile Remove="@(Compile)" />
+    <Compile Include="$(MSBuildThisFileDirectory)**/*.cs" />
+    <Compile Remove="obj/**/*.cs" />
+		<Compile Remove="Resources/**/*" />
+  </ItemGroup>
+</Project>

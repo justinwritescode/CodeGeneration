@@ -9,11 +9,16 @@
    Copyright © 2022 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
-<Project Sdk="Microsoft.Build.Traversal">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <UsingMicrosoftNetSdk>true</UsingMicrosoftNetSdk>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./src/**/*proj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="**/*.cs" />
   </ItemGroup>
 </Project>

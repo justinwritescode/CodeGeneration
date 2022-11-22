@@ -13,7 +13,7 @@
 using System.Text;
 using Microsoft.CodeAnalysis;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
 public static class NamedTypeSymbolExtensions
 {

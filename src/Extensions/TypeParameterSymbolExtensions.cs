@@ -1,8 +1,20 @@
+// 
+// TypeParameterSymbolExtensions.cs
+// 
+//   Created: 2022-10-31-01:35:49
+//   Modified: 2022-11-04-11:14:46
+// 
+//   Author: Justin Chase <justin@justinwritescode.com>
+//   
+//   Copyright © 2022 Justin Chase, All Rights Reserved
+//      License: MIT (https://opensource.org/licenses/MIT)
+// 
+
 using Microsoft.CodeAnalysis;
 
-namespace JustinWritesCode.CodeGeneration.Extensions;
+namespace Microsoft.CodeAnalysis;
 
-internal static class TypeParameterSymbolExtensions
+public static class TypeParameterSymbolExtensions
 {
     /// <summary>
     /// https://www.codeproject.com/Articles/871704/Roslyn-Code-Analysis-in-Easy-Samples-Part-2

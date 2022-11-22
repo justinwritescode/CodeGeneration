@@ -1,0 +1,23 @@
+<!--
+ JustinWritesCode.Generation.Abstractions.csproj
+ 
+   Created: 2022-11-02-12:38:21
+   Modified: 2022-11-02-12:38:21
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <PackageId>JustinWritesCode.CodeGeneration.Abstractions</PackageId>
+    <AssemblyName>$(PackageId)</AssemblyName>
+    <RootNamespace>$(PackageId)</RootNamespace>
+    <Title>Code Generation Abstractions</Title>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)Include.items" />
+  <Import Project="JustinWritesCode.CodeGeneration.Abstractions.props" />
+</Project>

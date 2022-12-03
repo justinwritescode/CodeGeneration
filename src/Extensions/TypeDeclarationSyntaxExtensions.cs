@@ -1,14 +1,14 @@
-// 
+//
 // TypeDeclarationSyntaxExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:43:14
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
 using System.Text;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis;
 /// <summary>
 /// https://stackoverflow.com/questions/20458457/getting-class-fullname-including-namespace-from-roslyn-classdeclarationsyntax
 /// </summary>
-public static class TypeDeclarationSyntaxExtensions
+internal static class TypeDeclarationSyntaxExtensions
 {
     const char NESTED_CLASS_DELIMITER = '+';
     const char NAMESPACE_CLASS_DELIMITER = '.';

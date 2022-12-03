@@ -27,7 +27,7 @@ using System.Text.RegularExpressions;
 
 namespace Microsoft.CodeAnalysis;
 
-public static class StringExtensions
+internal static class StringExtensions
 {
     private static readonly Regex ExtractValueBetween = new("(?<=<).*(?=>)", RegexOptions.Compiled);
 

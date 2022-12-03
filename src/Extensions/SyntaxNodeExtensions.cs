@@ -1,14 +1,14 @@
-// 
+//
 // SyntaxNodeExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:41:27
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -17,7 +17,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 // ReSharper disable once CheckNamespace
 namespace Microsoft.CodeAnalysis;
 
-public static class SyntaxNodeExtensions
+internal static class SyntaxNodeExtensions
 {
     /// <summary>
     /// determine the namespace the class/enum/struct is declared in, if any
@@ -50,7 +50,7 @@ public static class SyntaxNodeExtensions
             // We have a namespace. Use that as the type
             nameSpace = namespaceParent.Name.ToString();
 
-            // Keep moving "out" of the namespace declarations until we 
+            // Keep moving "out" of the namespace declarations until we
             // run out of nested namespace declarations
             while (true)
             {

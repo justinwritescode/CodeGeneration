@@ -14,7 +14,7 @@ using Microsoft.CodeAnalysis;
 
 namespace Microsoft.CodeAnalysis;
 
-public static class PropertySymbolExtensions{
+internal static class PropertySymbolExtensions{
 
     public static bool IsPrivateSettable(this IPropertySymbol property)
     {

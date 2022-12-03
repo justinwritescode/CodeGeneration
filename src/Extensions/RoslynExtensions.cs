@@ -1,18 +1,18 @@
-// 
+//
 // RoslynExtensions.cs
-// 
+//
 //   Created: 2022-11-06-08:09:40
 //   Modified: 2022-11-06-08:09:40
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 namespace Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Collections.Immutable;
-public static class RoslynExtensions
+internal static class RoslynExtensions
 {
     public static IEnumerable<ITypeSymbol> GetBaseTypesAndThis(this ITypeSymbol type)
     {
@@ -138,7 +138,7 @@ public static class RoslynExtensions
             }
             else
             {
-                // this is a generic argument value. 
+                // this is a generic argument value.
                 var namedTypeSymbol = arg as INamedTypeSymbol;
                 strToAdd = namedTypeSymbol.GetFullTypeString();
             }

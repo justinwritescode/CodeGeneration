@@ -9,10 +9,11 @@
    Copyright © 2022 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.Build.NoTargets">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+	<Description>This is a **source-code-only** package that contains some extension methods to be used with code generation.</Description>
   </PropertyGroup>
   <Import Project="$(MSBuildThisFileDirectory)Include.items" />
 </Project>

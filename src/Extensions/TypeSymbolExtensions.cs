@@ -1,14 +1,14 @@
-// 
+//
 // TypeSymbolExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:43:30
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
 using System.Collections;
 using System.Collections.ObjectModel;
@@ -21,7 +21,7 @@ namespace Microsoft.CodeAnalysis;
 /// - https://github.com/explorer14/SourceGenerators
 /// - https://github.com/icsharpcode/RefactoringEssentials
 /// </summary>
-public static class TypeSymbolExtensions
+internal static class TypeSymbolExtensions
 {
     // public static FluentTypeKind GetFluentTypeKind(this ITypeSymbol typeSymbol)
     // {

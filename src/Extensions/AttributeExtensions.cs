@@ -1,18 +1,18 @@
-// 
+//
 // AttributeExtensions.cs
-// 
+//
 //   Created: 2022-11-10-06:43:47
 //   Modified: 2022-11-10-06:43:47
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 namespace Microsoft.CodeAnalysis;
 using System.Text;
 
-public static class AttributeExtensions
+internal static class AttributeExtensions
 {
     public static AttributeData? GetAttribute(this ISymbol symbol, string attributeName)
     {
@@ -42,7 +42,7 @@ public static class AttributeExtensions
         var argument = attribute?.ConstructorArguments.ElementAtOrDefault(argumentIndex);
         return argument?.Value?.ToString();
     }
-    
+
     public static string? GetAttributeArgumentValueAsString(this ISymbol symbol, string attributeName, string argumentName)
     {
         var attribute = symbol?.GetAttribute(attributeName);

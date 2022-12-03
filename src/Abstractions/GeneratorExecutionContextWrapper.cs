@@ -1,14 +1,15 @@
-/* 
+using System.Security.AccessControl;
+/*
  * GeneratorExecutionContextWrapper.cs
- * 
+ *
  *   Created: 2022-11-02-12:35:41
  *   Modified: 2022-11-12-12:19:46
- * 
+ *
  *   Author: Justin Chase <justin@justinwritescode.com>
- *   
+ *
  *   Copyright © 2022 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
- */ 
+ */
 
 namespace JustinWritesCode.CodeGeneration.Abstractions;
 using Microsoft.CodeAnalysis;

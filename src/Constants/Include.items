@@ -12,7 +12,7 @@
 <Project>
   <ItemGroup>
 		<Compile Remove="@(Compile)" />
-    <Compile Include="$(MSBuildThisFileDirectory)**/*.cs" />
+    <PackageFile Include="$(MSBuildThisFileDirectory)**/*.cs" PackagePath="contentFiles/%(RecursiveDir)%(Filename)%(Extension)" />
     <Compile Remove="obj/**/*.cs" />
 		<Compile Remove="Resources/**/*" />
   </ItemGroup>

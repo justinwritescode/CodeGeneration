@@ -1,18 +1,18 @@
-// 
+//
 // MemberDeclarationSyntaxExtensions.cs
-// 
+//
 //   Created: 2022-11-10-06:59:34
 //   Modified: 2022-11-10-07:00:36
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 namespace Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-public static class MemberDeclarationSyntaxExtensions
+internal static class MemberDeclarationSyntaxExtensions
 {
     public static AttributeSyntax? GetAttribute(this MemberDeclarationSyntax member, string attributeName)
     {

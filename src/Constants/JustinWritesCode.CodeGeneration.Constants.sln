@@ -5,23 +5,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D7042715-8A8
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Testing|Any CPU = Testing|Any CPU
-		Local|Any CPU = Local|Any CPU
-		Debug|Any CPU = Debug|Any CPU
-		Staging|Any CPU = Staging|Any CPU
-		Release|Any CPU = Release|Any CPU
+		@(Configuration)|Any CPU = @(Configuration)|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.Build.0 = Testing|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Local|Any CPU.ActiveCfg = Local|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Local|Any CPU.Build.0 = Local|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Staging|Any CPU.Build.0 = Staging|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.@(Configuration)|Any CPU.ActiveCfg = @(Configuration)|Any CPU
+		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.@(Configuration)|Any CPU.Build.0 = @(Configuration)|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

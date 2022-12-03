@@ -1,21 +1,21 @@
-// 
+//
 // NamedTypeSymbolExtensions.cs
-// 
+//
 //   Created: 2022-10-30-10:35:49
 //   Modified: 2022-10-30-10:40:59
-// 
+//
 //   Author: Justin Chase <justin@justinwritescode.com>
-//   
+//
 //   Copyright © 2022 Justin Chase, All Rights Reserved
 //      License: MIT (https://opensource.org/licenses/MIT)
-// 
+//
 
 using System.Text;
 using Microsoft.CodeAnalysis;
 
 namespace Microsoft.CodeAnalysis;
 
-public static class NamedTypeSymbolExtensions
+internal static class NamedTypeSymbolExtensions
 {
     public static string GenerateFileName(this INamedTypeSymbol namedTypeSymbol)
     {

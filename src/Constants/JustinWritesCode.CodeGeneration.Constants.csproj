@@ -10,11 +10,13 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.Build.NoTargets">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+		<Description>This is a **source-code-only** package that contains some constants and helper methods for code generation.</Description>
+		<ImplicitUsings>disabled</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="$(MSBuildThisFileDirectory)Resources/**/*" />

@@ -13,6 +13,6 @@
 <Project>
   <ItemGroup>
     <Using Include="Microsoft.CodeAnalysis" />
-    <Using Include="JustinWritesCode.CodeGeneration.Extensions" />
+    <!-- <Using Include="JustinWritesCode.CodeGeneration.Extensions" ExcludeAssets="Analyzers" /> -->
   </ItemGroup>
 </Project>

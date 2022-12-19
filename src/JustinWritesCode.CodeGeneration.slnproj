@@ -1,0 +1,24 @@
+<!--
+ * JustinWritesCode.CodeGeneration.slnproj
+ * 
+ *   Created: 2022-12-10-06:15:41
+ *   Modified: 2022-12-10-06:15:41
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsodft.Build.Traversal">
+  <PropertyGroup>
+    <IncludeInSolutionFile>false</IncludeInSolutionFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./Scriban/src/Scriban.Signed/Scriban.Signed.csproj" />
+    <ProjectReference Include="./Abstractions/JustinWritesCode.CodeGeneration.Abstractions.csproj" />
+    <ProjectReference Include="./Constants/JustinWritesCode.CodeGeneration.Constants.csproj" />
+    <ProjectReference Include="./DtoGenerator/JustinWritesCode.CodeGeneration.DtoGenerator.csproj" />
+    <ProjectReference Include="./Extensions/JustinWritesCode.CodeGeneration.Extensions.csproj" />
+  </ItemGroup>
+</Project>

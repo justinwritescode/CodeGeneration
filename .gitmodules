@@ -1,0 +1,3 @@
+[submodule "src/Scriban"]
+	path = src/Scriban
+	url = https://github.com/scriban/scriban.git

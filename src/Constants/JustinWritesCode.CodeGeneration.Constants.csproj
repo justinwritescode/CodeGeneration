@@ -10,17 +10,17 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="Microsoft.Build.NoTargets">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
+    <!-- <TargetFramework>net7.0</TargetFramework> -->
+    <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<Description>This is a **source-code-only** package that contains some constants and helper methods for code generation.</Description>
-		<ImplicitUsings>disabled</ImplicitUsings>
+		<ImplicitUsings>enabled</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="../Scriban/src/Scriban.Signed/Scriban.Signed.csproj" />
     <Compile Remove="$(MSBuildThisFileDirectory)Resources/**/*" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources/**/*" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)/Resources/**/*" LogicalName="%(Filename)%(Extension)" />
   </ItemGroup>
-  <Import Project="$(MSBuildThisFileDirectory)Include.items" />
+  <!-- <Import Project="$(MSBuildThisFileDirectory)Include.items" /> -->
 </Project>

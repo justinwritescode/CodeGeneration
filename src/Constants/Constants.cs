@@ -1,15 +1,22 @@
-// 
-// Constants.cs
-// 
-//   Created: 2022-10-31-05:30:55
-//   Modified: 2022-10-31-05:30:55
-// 
-//   Author: Justin Chase <justin@justinwritescode.com>
-//   
-//   Copyright © 2022 Justin Chase, All Rights Reserved
-//      License: MIT (https://opensource.org/licenses/MIT)
-// 
+/*
+ * Constants.cstemplate
+ *
+ *   Created: 2022-10-31-07:30:55
+ *   Modified: 2022-12-08-01:01:51
+ *
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+ */
+
+#pragma warning disable
+
 namespace JustinWritesCode.CodeGeneration   ;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 public static partial class Constants
 {
@@ -35,29 +42,26 @@ public static partial class Constants
     public const string ProjectUrlBuildProperty = $"build_property.{PackageProjectUrl}";
 
     public static readonly string CodeHeaderTemplate =
-        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("JustinWritesCode.InterfaceGenerator.Resources.CodeHeader.cs")!)
+        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("CodeHeader.cstemplate")!)
         .ReadToEnd()
         .TrimToSentinel();
 
     public static readonly string MultipleAuthorsCodeHeaderCommentTemplate =
-        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("JustinWritesCode.InterfaceGenerator.Resources.MultipleAuthorsCodeHeaderCommentTemplate.cs")!)
-        .ReadToEnd()
-        .TrimToSentinel();
+        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("MultipleAuthorsCodeHeaderComment.cstemplate")!)
+        .ReadToEnd();
 
     public static readonly string MultipleAuthorsCodeHeaderCommentTemplate_PerAuthor =
-        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("JustinWritesCode.InterfaceGenerator.Resources.MultipleAuthorsCodeHeaderCommentTemplate_PerAuthor.cs")!)
-        .ReadToEnd()
-        .TrimToSentinel();
+        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("MultipleAuthorsCodeHeaderCommentTemplate_PerAuthor.cstemplate")!)
+        .ReadToEnd();
 
     public static readonly string SingleAuthorCodeHeaderTemplate =
-        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("JustinWritesCode.InterfaceGenerator.Resources.SingleAuthorCodeHeaderTemplate.cs")!)
-        .ReadToEnd()
-        .TrimToSentinel();
+        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("SingleAuthorCodeHeaderTemplate.cstemplate")!)
+        .ReadToEnd();
 
-    public static readonly string AttributeDeclarationTemplate =
-        new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("JustinWritesCode.InterfaceGenerator.Resources.AttributeDeclaration.cs")!)
-        .ReadToEnd()
-        .TrimToSentinel();
+    public static readonly CodeTemplate AttributeDeclarationTemplate = new CodeTemplate("AttributeDeclaration.cstemplate");
+    public static readonly CodeTemplate MinimalCodeHeaderTemplate = new CodeTemplate("MinimalCodeHeader.cstemplate");
+        // new StreamReader(typeof(Constants).Assembly.GetManifestResourceStream("MinimalCodeHeader.cstemplate")!)
+        // .ReadToEnd();
 
     public static string GenerateCodeHeader(string? filename = null, IEnumerable<(string Name, string Email)>? authors = null, string? authorUrl = null, string? licenseExpression = null)
     {
@@ -79,19 +83,21 @@ public static partial class Constants
         codeHeader = codeHeader.Replace(LicensePlaceholder, licenseExpression);
         return codeHeader;
     }
-
-    public static string GenerateAttributeDeclaration(string attributeName, AttributeTargets attributeTargets = AttributeTargets.All, params (Type Type, string Name, string? DefaultValue)[] properties)
+    public static string GenerateAttributeDeclaration(string attributeName, AttributeTargets attributeTargets = AttributeTargets.All, Type baseType = default, params AttributeProperty[] properties)
     {
-        var attributeDeclaration = AttributeDeclarationTemplate;
-        attributeDeclaration = attributeDeclaration.Replace(AttributeClassNamePlaceholder, attributeName);
-        attributeDeclaration = attributeDeclaration.Replace(AttributeTargetsPlaceholder, attributeTargets.ToString());
-        var paramsString = string.Join(", ", properties.Select(p => $"{p.Type.FullName} @{p.Name}"));
-        var propertiesString = string.Join(", ", properties.Select(p => $"{p.Type.FullName} @{p.Name} {{ get; }}"));
-        var assignmentsString = string.Join(Environment.NewLine, properties.Select(p => $"this.@{p.Name} = @{p.Name} ?? {p.DefaultValue};"));
-        attributeDeclaration = attributeDeclaration.Replace(AttributeParamsPlaceholder, paramsString);
-        attributeDeclaration = attributeDeclaration.Replace(AttributePropertyAssignmentsPlaceholder, assignmentsString);
-        attributeDeclaration = attributeDeclaration.Replace(AttributePropertiesDeclarationsPlaceholder, propertiesString);
-        return attributeDeclaration;
+        baseType ??= typeof(Attribute);
+        var result =
+        MinimalCodeHeaderTemplate.Template.Render(new { filename = $"{attributeName}.cs", timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm") }) +
+        Environment.NewLine +
+        AttributeDeclarationTemplate.Template.Render(new AttributeInfo
+        (
+            attributeName,
+            baseType,
+            attributeTargets.ToString(),
+            properties
+        ));
+
+        return result;
     }
 
     public static string TrimToSentinel(this string codeHeader)

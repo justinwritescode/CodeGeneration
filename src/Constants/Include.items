@@ -11,9 +11,10 @@
 -->
 <Project>
   <ItemGroup>
-		<Compile Remove="@(Compile)" />
-    <PackageFile Include="$(MSBuildThisFileDirectory)**/*.cs" PackagePath="contentFiles/%(RecursiveDir)%(Filename)%(Extension)" />
-    <Compile Remove="obj/**/*.cs" />
-		<Compile Remove="Resources/**/*" />
+		<Compile Remove="$(MSBuildThisFileDirectory)Resources/**/*" />
+    <!-- <PackageFile Include="@(Compile)" PackagePath="contentFiles/cs/$(TargetFramework)/%(RecursiveDir)%(Filename)%(Extension)" /> -->
+    <!-- <Compile Remove="@(Compile)" />
+    <Compile Remove="$(MSBuildThisFileDirectory)obj/**/*.cs" /> -->
+		
   </ItemGroup>
 </Project>

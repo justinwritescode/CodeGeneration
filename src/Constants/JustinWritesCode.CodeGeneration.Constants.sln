@@ -1,8 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.CodeGeneration.Constants", "JustinWritesCode.CodeGeneration.Constants.csproj", "{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scriban.Signed", "..\Scriban\src\Scriban.Signed\Scriban.Signed.csproj", "{CFC2A2CA-7D42-4886-AD21-7BD70752133C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D7042715-8A84-428B-A828-C8599FBF9A7C}"
 EndProject
 Global
@@ -24,13 +22,6 @@ Global
 		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
 		{F86E1750-AFC8-45BA-9A88-C5EBD57A9FBA}.Testing|Any CPU.Build.0 = Testing|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Local|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CFC2A2CA-7D42-4886-AD21-7BD70752133C}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

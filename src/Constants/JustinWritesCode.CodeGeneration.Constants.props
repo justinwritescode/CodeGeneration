@@ -12,6 +12,14 @@
 
 <Project>
   <ItemGroup>
-    <Using Include="JustinWritesCode.CodeGeneration.Constants" Static="true" />
+    <!-- <Using Include="JustinWritesCode.CodeGeneration.Constants" Static="true" /> -->
+  </ItemGroup>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);SCRIBAN_PUBLIC;SCRIBAN_SIGNED</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks.Extensions" VersionOverride="4.5.0" />
+    <PackageReference Include="Microsoft.CSharp" VersionOverride="4.5.0" />
+    <Using Include="System.Convert" Alias="Convert" />
   </ItemGroup>
 </Project>

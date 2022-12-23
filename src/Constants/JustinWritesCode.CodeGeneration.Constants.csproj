@@ -10,17 +10,23 @@
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
-<Project Sdk="Microsoft.Build.NoTargets">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- <TargetFramework>net7.0</TargetFramework> -->
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <EnableGlobalCodeGenerators>false</EnableGlobalCodeGenerators>
 		<Description>This is a **source-code-only** package that contains some constants and helper methods for code generation.</Description>
-		<ImplicitUsings>disabled</ImplicitUsings>
+		<ImplicitUsings>enabled</ImplicitUsings>
+    <DefineConstants>$(DefineConstants);SCRIBAN_PUBLIC;SCRIBAN_SIGNED</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <!-- <ProjectReference Include="../Scriban/src/Scriban.Signed/Scriban.Signed.csproj" /> -->
     <Compile Remove="$(MSBuildThisFileDirectory)Resources/**/*" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources/**/*" />
+    <Compile Include="../Scriban/src/Scriban/**/*.cs" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)/Resources/**/*" LogicalName="%(Filename)%(Extension)" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" VersionOverride="4.5.0" />
+    <Compile Remove="../Scriban/src/Scriban/**/Scriban.AssemblyInfo.cs" />
+    <Compile Remove="../Scriban/src/Scriban/**/*.AssemblyAttributes.cs" />
+    <PackageReference Include="Microsoft.CSharp" VersionOverride="4.5.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildThisFileDirectory)Include.items" />
+  <!-- <Import Project="$(MSBuildThisFileDirectory)Include.items" /> -->
 </Project>

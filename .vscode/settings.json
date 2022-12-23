@@ -117,100 +117,102 @@
     "custom-command-runner.settings.paths": [
         "../.scripts/custom-commands.ts",
         "../.scripts/ts"
-    ],
-    "psi-header.config": {
-        "forceToTop": true,
-        "blankLinesAfter": 1,
-        "spacesBetweenYears": false,
-        "license": "MIT",
-        "author": "Justin Chase",
-        "initials": "JC",
-        "authorEmail": "justin@justinwritescode.com",
-        "company": "JustinWritesCode",
-        "copyrightHolder": "Justin Chase",
-        "creationDateZero": "now"
-        // "hostname": "justinwritescode.com"
-    },
-    "psi-header.changes-tracking": {
-        "isActive": true,
-        "modAuthor": "Modified By:",
-        "modDate": "Last Modified:",
-        "modDateFormat": "dd/MM/yyyy hh:nn:ss",
-        "include": [
-            "msbuild",
-            "csharp",
-            "xml",
-            "yaml",
-            "markdown",
-            "shellscript",
-            "typescript"
-        ],
-        // "includeGlob": ["*.cs", "*.config", "*.props", "*.targets", "*."],
-        // "exclude": ["markdown", "json", "jsonc", "shellscript"],
-        "excludeGlob": ["**/resources/**"],
-        "autoHeader": "autoSave",
-        "enforceHeader": true,
-        /*"replace": [
-            "Filename:",
-            "Project"
-        ],*/
-        "updateLicenseVariables": false
-    },
-    "psi-header.variables": [
-        [
-            "projectCreationYear",
-            "2022"
-        ]
-    ],
-    "psi-header.templates": [
-        {
-            "language": "*",
-            "template": [
-                "<<filename>>",
-                "",
-                "  Created: <<filecreated('YYYY-MM-DD-hh:mm:ss')>>",
-                "  Modified: <<dateformat('YYYY-MM-DD-hh:mm:ss')>>",
-                "",
-                "  Author: <<author>> <<<authoremail>>>",
-                "  ",
-                "  Copyright © <<yeartoyear(<<projectCreationYear>>, now)>> <<copyrightHolder>>, All Rights Reserved",
-                "     License: <<spdxid>> (<<licenseurl>>)"
-            ]
-        }
-    ],
-    "psi-header.lang-config": [
-        {
-            "language": "xml",
-            "begin": "<!--",
-            "end": "-->"
-        },
-        {
-            "language": "msbuild",
-            "mapTo": "xml"
-        },
-        {
-            "language": "markdown",
-            "mapTo": "xml"
-        },
-        {
-            "language": "csharp",
-            "begin": "// ",
-            "prefix": "// ",
-            "end": "// "
-        },
-        {
-            "language": "typescript",
-            "mapTo": "csharp"
-        },
-        {
-            "language": "yaml",
-            "mapTo": "shellscript"
-        },
-        {
-            "language": "shellscript",
-            "begin": "# ",
-            "prefix": "# ",
-            "end": "# "
-        }
     ]
+    // "psi-header.config": {
+    //     "forceToTop": true,
+    //     "blankLinesAfter": 1,
+    //     "spacesBetweenYears": false,
+    //     "license": "MIT",
+    //     "author": "Justin Chase",
+    //     "initials": "JC",
+    //     "authorEmail": "justin@justinwritescode.com",
+    //     "company": "JustinWritesCode",
+    //     "copyrightHolder": "Justin Chase",
+    //     "creationDateZero": "now"
+    //     // "hostname": "justinwritescode.com"
+    // },
+    // "psi-header.changes-tracking": {
+    //     "isActive": true,
+    //     "modAuthor": "Modified By:",
+    //     "modDate": "Last Modified:",
+    //     "modDateFormat": "dd/MM/yyyy hh:nn:ss",
+    //     "include": [
+    //         "msbuild",
+    //         "csharp",
+    //         "xml",
+    //         "yaml",
+    //         "markdown",
+    //         "shellscript",
+    //         "typescript"
+    //     ],
+    //     // "includeGlob": ["*.cs", "*.config", "*.props", "*.targets", "*."],
+    //     // "exclude": ["markdown", "json", "jsonc", "shellscript"],
+    //     "excludeGlob": [
+    //         "**/resources/**"
+    //     ],
+    //     "autoHeader": "off",
+    //     "enforceHeader": true,
+    //     /*"replace": [
+    //         "Filename:",
+    //         "Project"
+    //     ],*/
+    //     "updateLicenseVariables": false
+    // },
+    // "psi-header.variables": [
+    //     [
+    //         "projectCreationYear",
+    //         "2022"
+    //     ]
+    // ],
+    // "psi-header.templates": [
+    //     {
+    //         "language": "*",
+    //         "template": [
+    //             "<<filename>>",
+    //             "",
+    //             "  Created: <<filecreated('YYYY-MM-DD-hh:mm:ss')>>",
+    //             "  Modified: <<dateformat('YYYY-MM-DD-hh:mm:ss')>>",
+    //             "",
+    //             "  Author: <<author>> <<<authoremail>>>",
+    //             "  ",
+    //             "  Copyright © <<yeartoyear(<<projectCreationYear>>, now)>> <<copyrightHolder>>, All Rights Reserved",
+    //             "     License: <<spdxid>> (<<licenseurl>>)"
+    //         ]
+    //     }
+    // ],
+    // "psi-header.lang-config": [
+    //     {
+    //         "language": "xml",
+    //         "begin": "<!--",
+    //         "end": "-->"
+    //     },
+    //     {
+    //         "language": "msbuild",
+    //         "mapTo": "xml"
+    //     },
+    //     {
+    //         "language": "markdown",
+    //         "mapTo": "xml"
+    //     },
+    //     {
+    //         "language": "csharp",
+    //         "begin": "// ",
+    //         "prefix": "// ",
+    //         "end": "// "
+    //     },
+    //     {
+    //         "language": "typescript",
+    //         "mapTo": "csharp"
+    //     },
+    //     {
+    //         "language": "yaml",
+    //         "mapTo": "shellscript"
+    //     },
+    //     {
+    //         "language": "shellscript",
+    //         "begin": "# ",
+    //         "prefix": "# ",
+    //         "end": "# "
+    //     }
+    // ]
 }

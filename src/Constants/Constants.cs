@@ -85,7 +85,7 @@ public static partial class Constants
 [AttributeUsage({{ regex.replace (regex.replace attribute_targets "(?:(?:^)|(?: ))" "System.AttributeTargets.") "," " | " }}, AllowMultiple = false)]
 internal class {{ attribute_class_name }} : {{ attribute_base_type.full_name }}
 {
-    public {{ attribute_class_name }} ({{ for p in attribute_properties }}{{ p.property_type.full_name }} {{ p.property_name }}{{ if !for.last }}, {{end}}{{ end }})
+    public {{ attribute_class_name }} ({{ for p in attribute_properties }}{{ p.property_type.full_name }}? {{ p.property_name }} = {{ p.default_value }} {{ if !for.last }}, {{end}}{{ end }})
     {
         {{~ for p in attribute_properties ~}}
         this.{{~ p.property_name }} = {{ p.property_name }} ?? {{ p.default_value }};
@@ -152,6 +152,11 @@ internal class {{ attribute_class_name }} : {{ attribute_base_type.full_name }}
         ));
 
         return result;
+    }
+
+    public static string GenerateAttributeDeclaration(AttributeInfo attributeInfo)
+    {
+        return MinimalCodeHeaderTemplate.Template.Render(attributeInfo);
     }
 
     public static string TrimToSentinel(this string codeHeader)

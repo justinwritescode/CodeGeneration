@@ -9,5 +9,9 @@
  *   Copyright © 2022 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
  */
+#if !IS_EXTERNAL_INIT_DEFINED
+#define IS_EXTERNAL_INIT_DEFINED
 namespace System.Runtime.CompilerServices;
 public class IsExternalInit { }
+
+#endif

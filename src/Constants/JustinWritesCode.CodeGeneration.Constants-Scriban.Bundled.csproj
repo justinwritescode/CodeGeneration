@@ -21,13 +21,13 @@
   <ItemGroup>
     <!-- <ProjectReference Include="../Scriban/src/Scriban.Signed/Scriban.Signed.csproj" /> -->
     <Compile Remove="$(MSBuildThisFileDirectory)Resources/**/*" />
-    <!-- <Compile Include="../Scriban/src/Scriban/**/*.cs" /> -->
-    <!-- <EmbeddedResource Include="$(MSBuildThisFileDirectory)/Resources/**/*" LogicalName="%(Filename)%(Extension)" /> -->
+    <Compile Include="../Scriban/src/Scriban/**/*.cs" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)/Resources/**/*" LogicalName="%(Filename)%(Extension)" />
     <PackageReference Include="System.Threading.Tasks.Extensions" VersionOverride="4.5.0" />
-    <!-- <Compile Remove="../Scriban/src/Scriban/**/Scriban.AssemblyInfo.cs" /> -->
-    <!-- <Compile Remove="../Scriban/src/Scriban/**/*.AssemblyAttributes.cs" /> -->
+    <Compile Remove="../Scriban/src/Scriban/**/Scriban.AssemblyInfo.cs" />
+    <Compile Remove="../Scriban/src/Scriban/**/*.AssemblyAttributes.cs" />
     <PackageReference Include="Microsoft.CSharp" VersionOverride="4.5.0" />
-    <PackageReference Include="Scriban.Signed" />
+    <Compile Remove="IsExternalInit.cs" />
   </ItemGroup>
   <!-- <Import Project="$(MSBuildThisFileDirectory)Include.items" /> -->
 </Project>

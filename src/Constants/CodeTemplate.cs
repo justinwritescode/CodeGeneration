@@ -5,9 +5,9 @@ namespace JustinWritesCode.CodeGeneration;
 
 public record struct CodeTemplate
 {
-    public string StringTemplate { get; init; }
-    public string ManifestResourceName { get; init; }
-    public Scriban.Template Template { get; init; }
+    public string StringTemplate { get; set; }
+    public string ManifestResourceName { get; set; }
+    public Scriban.Template Template { get; set; }
 
     public CodeTemplate(string codeTemplate)
     {
@@ -34,9 +34,9 @@ public record struct CodeTemplate
 
 public record struct CodeTemplate<T>
 {
-    public string StringTemplate { get; init; }
-    public string ManifestResourceName { get; init; }
-    public Scriban.Template Template { get; init; }
+    public string StringTemplate { get; set; }
+    public string ManifestResourceName { get; set; }
+    public Scriban.Template Template { get; set; }
 
     public static CodeTemplate FromResource(string manifestResourceName)
     {

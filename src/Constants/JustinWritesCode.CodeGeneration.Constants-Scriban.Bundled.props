@@ -1,0 +1,18 @@
+<!--
+ * JustinWritesCode.CodeGeneration.Constants.csproj
+ * 
+ *   Created: 2022-10-31-07:26:14
+ *   Modified: 2022-11-19-04:06:36
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+		<ImplicitUsings>enabled</ImplicitUsings>
+    <DefineConstants>$(DefineConstants);SCRIBAN_PUBLIC;SCRIBAN_SIGNED</DefineConstants>
+  </PropertyGroup>
+</Project>

@@ -6,7 +6,7 @@
  * 
  *   Author: Justin Chase <justin@justinwritescode.com>
  *   
- *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
  *      License: MIT (https://opensource.org/licenses/MIT)
 -->
 
@@ -15,21 +15,24 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>JustinWriesCode.CodeGeneration.DtoGenerator</PackageId>
     <AssemblyName>$(PackageId)</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>../lib/</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" />
     <PackageReference Include="Microsoft.CodeAnalysis.Common" />
+    <PackageReference Include="Microsoft.CSharp" VersionOverride="4.5.0" />
     <PackageReference Include="System.Text.Json" />
     <PackageReference Include="System.ComponentModel.Usings" />
     <PackageReference Include="System.ComponentModel.Annotations" />
-    <PackageReference Include="JustinWritesCode.CodeGeneration.Constants" IncludeAssets="ContentFiles" ExcludeAssets="None" />
+    <PackageReference Include="JustinWritesCode.CodeGeneration.Constants-Scriban.Bundled" IncludeAssets="ContentFiles;Build" ExcludeAssets="None" />
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Remove="./Resources/*" />
-    <EmbeddedResource Include="./Resources/**/*" />
+    <EmbeddedResource Include="./Resources/**/*" LogicalName="%(Filename)%(Extension)" />
   </ItemGroup>
 
   <PropertyGroup>

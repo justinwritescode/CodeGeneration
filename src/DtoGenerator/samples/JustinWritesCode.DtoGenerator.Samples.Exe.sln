@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.DtoGenerator.Samples.Exe", "JustinWritesCode.DtoGenerator.Samples.Exe.csproj", "{A1E0582F-5683-459C-9DAF-4C76E287138C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DFAEFA68-522E-42A7-A79D-B83D17709E3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Testing|Any CPU = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Local|Any CPU.Build.0 = Local|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{A1E0582F-5683-459C-9DAF-4C76E287138C}.Testing|Any CPU.Build.0 = Testing|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1E0582F-5683-459C-9DAF-4C76E287138C} = {DFAEFA68-522E-42A7-A79D-B83D17709E3C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD7883BA-851B-4CC6-AB15-9C830A12A380}
+	EndGlobalSection
+EndGlobal

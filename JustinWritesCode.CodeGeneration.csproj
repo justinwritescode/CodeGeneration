@@ -17,7 +17,9 @@
     <UsingMicrosoftNetSdk>true</UsingMicrosoftNetSdk>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="./src/**/*proj" />
+    <ProjectReference Include="./src/Abstractions/JustinWritesCode.CodeGeneration.Abstractions.csproj
+    <ProjectReference Include="./src/Constants/JustinWritesCode.CodeGeneration.Constants.csproj
+    <ProjectReference Include="./src/Extensions/JustinWritesCode.CodeGeneration.Extensions.csproj
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="**/*.cs" />

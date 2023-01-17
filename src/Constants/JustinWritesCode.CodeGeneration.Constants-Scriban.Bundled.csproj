@@ -28,6 +28,7 @@
     <Compile Remove="../Scriban/src/Scriban/**/*.AssemblyAttributes.cs" />
     <PackageReference Include="Microsoft.CSharp" VersionOverride="4.5.0" />
     <Compile Remove="IsExternalInit.cs" />
+    <Using Include="System.Convert" Alias="Convert" />
   </ItemGroup>
   <!-- <Import Project="$(MSBuildThisFileDirectory)Include.items" /> -->
 </Project>

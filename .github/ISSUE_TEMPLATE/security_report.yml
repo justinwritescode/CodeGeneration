@@ -1,7 +1,9 @@
 name: Security Vulnerability Report
 description: File a security vulnerability report
 title: "[Security]: "
-labels: ["security", "triage"]
+labels: 
+  - "security"
+  - "triage"
 assignees:
   - justinwritescode
 body:

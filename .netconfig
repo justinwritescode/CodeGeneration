@@ -1,0 +1,5 @@
+[file "global.json"]
+	url = https://github.com/justinwritescode/justinwritescode/blob/main/global.json
+	sha = 00646fa0ecfd71e946d6bdf1857341d96b9ef386
+	etag = fd3f22494e9553d2b2534735b3ee69a64b2f07bd01063ae560a514c621f06517
+	weak
